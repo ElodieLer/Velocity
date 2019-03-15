@@ -1,0 +1,656 @@
+#sidebar{
+  display: none;
+}
+#burger{
+  display: none; /* pour faire displaraitre*/
+}
+#chr{
+  display: none;
+}
+#map {
+  
+    top: 0;
+    bottom: 0;
+    width: 500px;
+    height: 900px;
+    display: none;/* pour faire displaraitre + show+id*/
+  }
+  
+  .marker {
+   
+    background-size: cover;
+    width: 50px;
+    cursor: pointer;
+  }
+  .mapboxgl-popup {
+    max-width: 250px;
+  }
+  
+  .mapboxgl-popup-content {
+    
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  
+  
+  /*****************************NavBar********************************/
+  .navShadow{
+    background-color:#3CC7D9;
+  }
+
+  .w3-sidebar{
+    width: 300px;
+    background-color:  #3CC7D9;
+  }
+/*couleur icone navbar droite*/
+  .w3-teal-t{
+    background-color: #3CC7D9;
+    color: white; 
+  }
+
+  /***sidebar gauche****/
+  .w3-sidebar.blanc{
+    width: 300px;
+    background-color:  rgb(255, 255, 255);
+  }
+  /***bouton navbar gauche**/
+  .w3-button{
+    padding: 8px 10px !important;
+    
+    
+  }
+  .w3-white{
+    color: white !important;
+    background-color: #3CC7D9 !important;
+  }
+  
+  
+  /********************Formulaire***********************************/
+  
+  .section1{
+    background-color: #3CC7D9;
+    
+  }
+
+
+  form{
+    margin-top: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  .btn-log{
+  background-color: #3CC7D9;
+  border-radius: 20px; 
+  color: white;
+  border: none;
+  height: 40px;
+  
+  
+  padding-left: 100px;
+  padding-right: 100px;
+  margin-bottom: 100px;
+  margin-left: 10px;
+  }
+  .btn-log.inscri{
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px; 
+    color: #3CC7D9;
+    border: none;
+    height: 40px;
+  
+    padding-left: 100px;
+    padding-right: 130px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+     margin-left: 10px;
+    }
+  
+
+/*******************Logo*** + profil**************************************/
+.titre{
+  text-align: center;
+  color: #3CC7D9;
+  font-size: 15px;
+}
+.logo1{
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.alix{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  width: 150px;
+}
+
+.credit{
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px; 
+  color: #3CC7D9;
+  border: none;
+  height: 40px;
+  
+  padding-left: 20px;
+  padding-right: 20px;
+   margin-left: 65px;
+   margin-bottom: 30px;
+  }
+  .btn-deco{
+    background-color: rgb(255, 255, 255);
+  border-radius: 20px; 
+  color: #3CC7D9;
+  border: none;
+  height: 40px;
+  
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-top: 200px;
+  margin-left: 40px;
+  }
+  .profil{
+    text-align: center;
+    color: black;
+  }
+  .euro{
+    text-align: center;
+    color: white;
+  }
+/**********************Icones****************************************/
+.fa-info-circle, .fa-file-alt, .fa-headset, .fa-exclamation-triangle{
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  color:  #3CC7D9;
+}
+.fa-user{
+  margin-right: auto;
+  margin-bottom: auto;
+  margin-top: 0 ;
+  
+}
+.fa-heart{
+  margin-left: 20px;
+  margin-right: auto;
+  margin-bottom: auto;
+  margin-top: auto;
+  color: #F9D633;
+}
+.fa-id-card, .fa-shopping-cart, .fa-history, .fa-envelope{
+color: white;
+}
+
+
+/***************************search demo2**************************************/
+
+/* Demo 2 */
+#demo-2 input[type=search] {
+	width: 15px;
+	
+	color: transparent;
+	cursor: pointer;
+}
+#demo-2 input[type=search]:hover {
+	background-color: #fff;
+}
+#demo-2 input[type=search]:focus {
+	width: 130px;
+	padding-left: 32px;
+	color: #000;
+	background-color: #fff;
+	cursor: auto;
+}
+#demo-2 input:-moz-placeholder {
+	color: transparent;
+}
+#demo-2 input::-webkit-input-placeholder {
+	color: transparent;
+}
+
+
+input {
+	outline: none;
+}
+input[type=search] {
+	-webkit-appearance: textfield;
+	/*-webkit-box-sizing: content-box; */
+	font-family: inherit;
+	font-size: 100%;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+	display: none; 
+}
+
+
+input[type=search] {
+	background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+	border: solid 1px #ccc;
+	padding: 9px 10px 9px 32px;
+	width: 55px;
+	
+	-webkit-border-radius: 10em;
+	-moz-border-radius: 10em;
+	border-radius: 10em;
+	
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	transition: all .5s;
+}
+input[type=search]:focus {
+	width: 130px;
+	background-color: #fff;
+	border-color: #3CC7D9;
+	
+	-webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
+	-moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
+	box-shadow: 0 0 5px rgba(109,207,246,.5);
+}
+
+
+input:-moz-placeholder {
+	color: #999;
+}
+input::-webkit-input-placeholder {
+	color: #999;
+}
+
+#demo-2{
+     /* margin-top: 0px; */ 
+     margin-right: 0px;
+     margin-left: 0px;
+     display: inline;
+}
+
+/********************popup coeur**********************************/
+.overlay.croix .closebtn.coeur{
+font-size: 40px;
+top: 0;
+padding: 0;
+color: white;
+}
+
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */    
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color:white; /* Black fallback color */
+  background-color: white; /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+   /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 15px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+/********************interieur popup*************************************/
+.menutest{
+ 
+  background-color: #3CC7D9;
+  color: white;
+}
+.favo{
+font-size: 20px;
+ margin-left: 20px;
+ padding: 10px;
+ 
+}
+
+/******************Chrono**********************************/
+
+// html,
+// body {
+//   width: 100%;
+//   height: 100%;
+//   font-family: sans-serif;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
+
+.container.chrono {
+  padding: 0 !important; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  //box-shadow: 0px 0px 54px -2px rgba(0, 0, 0, .2);
+  padding: 2em;
+}
+
+#chrono {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 0;
+}
+
+/********************Modal*******************************/
+
+/* The Modal (background) */
+.modal, .modale, .modalee, .modaleee, .modal1 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content.credi, .modal-content.aide, .modal-content.cr, .modal-content.conta, .modal-content.comp {
+  background-color: #fefefe;
+  margin: 0 auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 0px solid #888;
+  width: 100%; /* Could be more or less, depending on screen size */
+  height: 1320px;
+}
+
+/* The Close Button */
+.close.closee.closeee.closeeee.close1 {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover, .close:focus, .closee:hover, .closee:focus,.closeee:focus,.closeee:hover,.closeeee:focus,.closeeee:hover,.close1:focus,.close1:hover {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.myBtn, .myBtn2, .myBtn3, .myBtn5, .myBtn8{
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px; 
+  color: #3CC7D9;
+  border: none;
+  height: 40px;
+  
+  padding-left: 20px;
+  padding-right: 20px;
+   margin-left: 65px;
+   margin-bottom: 30px;
+  }
+/********************Timeline*****************************/
+.closee, .closeee, .closeeee{
+  padding-bottom: 20px;
+  font-size: 30px;
+}
+.close1{
+  padding-bottom: 20px;
+  padding-left: 280px;
+  font-size: 30px;
+}
+
+// /* Set a background color */
+// body {
+//   background-color: #474e5d;
+//   font-family: Helvetica, sans-serif;
+// }
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  right:10%;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: #3CC7D9;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.containere {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.containere::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #3CC7D9;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid rgb(168, 182, 41);
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent rgb(250, 133, 133);
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid rgb(16, 197, 70);
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 10px 30px;
+  background-color: rgb(70, 190, 194);
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+/* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+
+/* Full-width containers */
+  .containere {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 0px;
+  }
+
+/* Make sure that all arrows are pointing leftwards */
+  .containere::before {
+    left: 60px;
+    border: medium solid #3CC7D9;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #3CC7D9 transparent transparent;
+  }
+
+/* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+    left: 18px;
+  }
+
+/* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
+/*************************paiement*************************************/
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container.2 {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container.2 {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn.check {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn.check:hover {
+  background-color: #45a049;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (and change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}

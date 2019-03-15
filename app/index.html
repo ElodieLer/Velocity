@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="dist/assets/css/style.css">
+</head>
+<body>
+  <section class="navShadow">
+<!--------------------------------Nav bar---------------------------------------------------->
+
+<!-- Sidebar droite --------------->
+
+<div id="sidebar">
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-right" style="display:none;right:0;" id="rightMenu">
+  <button onclick="closeRightMenu()" class="w3-bar-item w3-button w3-large">Close &times;</button>
+  <img class="alix" src="dist/assets/img/alix.png" alt="">
+  <h2 class="profil">Alix Clark</h2>
+  <h3 class="euro"> Crédit : 10€</h3>
+  
+
+<button class="myBtn" id="myBtn">Ajouter du crédit</button>
+  <div class="menucompte">
+  <a href="#" id="myBtn8" class="w3-bar-item w3-button"><i class="fas fa-id-card"></i> Mon compte</a>
+  <div id="myModal1" class="modal1">
+    <!-- Modal content -->
+    <div class="modal-content comp">
+      <span class="close1">&times;</span>
+
+      <div class="row">
+        <div class="col-75">
+          <div class="container2">
+            
+      
+              <div class="row">
+                <div class="col-50">
+                  <h3>Adresse de facturation</h3>
+                  <label for="fname"><i class="fa fa-user"></i> Nom complet</label>
+                  <input type="text" id="fname" name="firstname" placeholder="Alix Clark">
+                  <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                  <input type="text" id="email" name="email" placeholder="AlixClark@exemple.com">
+                  <label for="adr"><i class="fa fa-address-card-o"></i> Adresse</label>
+                  <input type="text" id="adr" name="address" placeholder="Cours Lafayette">
+                  <label for="city"><i class="fa fa-institution"></i> Ville</label>
+                  <input type="text" id="city" name="city" placeholder="Lyon">
+      
+                  <div class="row">
+                    <div class="col-50">
+                      <label for="state">Pays</label>
+                      <input type="text" id="state" name="state" placeholder="FR">
+                    </div>
+                    <div class="col-50">
+                      <label for="zip">Code postal</label>
+                      <input type="text" id="zip" name="zip" placeholder="69000">
+                    </div>
+                  </div>
+                </div>
+      
+                <div class="col-50">
+                  
+                  <label for="fname">Mode de paiement</label>
+                  <div class="icon-container 2">
+                    <i class="fab fa-cc-visa" style="color:navy;"></i>
+                    <i class="fab fa-cc-amex" style="color:blue;"></i>
+                    <i class="fab fa-cc-mastercard" style="color:red;"></i>
+                    <i class="fab fa-cc-discover" style="color:orange;"></i>
+                  </div>
+                  <label for="cname">Nom de la carte</label>
+                  <input type="text" id="cname" name="cardname" placeholder="Alix Clark">
+                  <label for="ccnum">Numéro carte de crédit</label>
+                  <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                  <label for="expmonth">Date d'expiration</label>
+                  <input type="text" id="expmonth" name="expmonth" placeholder="Septembre">
+      
+                  <div class="row">
+                    <div class="col-50">
+                      <label for="expyear">Expire en</label>
+                      <input type="text" id="expyear" name="expyear" placeholder="2020">
+                    </div>
+                    <div class="col-50">
+                      <label for="cvv">CVV</label>
+                      <input type="text" id="cvv" name="cvv" placeholder="352">
+                    </div>
+                  </div>
+                </div>
+      
+              </div>
+              
+              <input type="submit" value="Modifier mes informations" class="btn check">
+            
+          </div>
+        </div>
+      
+      </div>
+      </div>
+      </div>
+
+  <a href="#" class="w3-bar-item w3-button"><i class="fas fa-shopping-cart"></i> Mes paiements</a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fas fa-history"></i> Historique de location</a>
+  <a href="#" class="w3-bar-item w3-button"><i class="fas fa-envelope"></i> Messages</a>
+  </div>
+
+<!-------------------------------------------------------->
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content credi">
+    <span class="close">&times;</span>
+    <p>page pour ajouter du credit</p>
+  </div>
+
+</div>
+
+  
+  <input type="submit" class="btn-deco" value="Se déconnecter" href="index.html">
+  
+</div>
+
+<div class="w3-teal">
+  <button class="w3-button w3-teal-t w3-xlarge w3-right" onclick="openRightMenu()"><i class="fas fa-user"></i></button>
+  
+</div>
+
+     
+<script>
+
+function openRightMenu() {
+  document.getElementById("rightMenu").style.display = "block";
+}
+
+function closeRightMenu() {
+  document.getElementById("rightMenu").style.display = "none";
+}
+</script>
+
+<!-----------Sidebar gauche----------------------->
+
+<div class="w3-sidebar blanc w3-bar-block w3-animate-left" style="display:none;z-index:5" id="mySidebar">
+    <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
+    <img class="logo1" src="dist/assets/img/logovelo.png" width="200" alt="img">
+   
+    <a href="#" id="myBtn2" class="w3-bar-item w3-button"><i class="fas fa-info-circle"></i>Comment utiliser Vélo-City</a>
+
+
+<div id="myModale" class="modale">
+
+  <!-- Modal content -->
+  <div class="modal-content aide">
+    <span class="closee">&times;</span>
+
+    
+    <div class="timeline">
+      <div class="containere right">
+        <div class="content">
+          <h3>Choisir une station</h3>
+          <p>Cliquez sur l'un des markers station de la map</p>
+        </div>
+      </div>
+      <div class="containere right">
+        <div class="content">
+          <h3>Réserver un vélo</h3>
+          <p>Une fois le marker selectionné, cliquer sur réserver.
+             Un chrono de 20 minutes se déclanchera afin de vous laissez le temps 
+             de prendre votre vélo. A la fin du chrono la réservation sera annulée</p>
+        </div>
+      </div>
+      <div class="containere right">
+        <div class="content">
+          <h3>Prendre son vélo</h3>
+          <p>Lorem ipsum..</p>
+        </div>
+      </div>
+      <div class="containere right">
+        <div class="content">
+          <h3>Une pause pendant le trajet ?</h3>
+          <p>Protégez votre vélo avec son système antivol intégré. Pour lactiver,
+             tournez le guidon vers la gauche et appuyez sur le bouton poussoir situé sur le cadre.
+            Un voyant Jaune s'allume ? Le vélo est bien sécurisé. Mais le vélo reste sous la responsabilitée de l'usager
+          jusqu'à sa restitution en station.</p>
+        </div>
+      </div>
+      <div class="containere right">
+        <div class="content">
+          <h3>Rendre son vélo</h3>
+          <p>Choisissez l'une des stations sur notre map. Et déposez simplement le vélo.
+            Vérifiez que le voyant rouge est bien allumé, ce qui signifique que votre vélo est bien accroché
+            à la station.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!---------------------------------------------------------->
+    <a href="#" id="myBtn3" class="w3-bar-item w3-button"><i class="fas fa-file-alt"></i>Comment rajouter du crédit</a>
+    <div id="myModalee" class="modalee">
+      <!-- Modal content -->
+      <div class="modal-content cr">
+        <span class="closeee">&times;</span>
+        <div class="timeline">
+          <div class="containere right">
+            <div class="content">
+              <h3>Choisir un mode de paiement</h3>
+              <p>Choisissez un mode de paiement, puis entrez vos informations</p>
+            </div>
+          </div>
+          <div class="containere right">
+            <div class="content">
+              <h3>Aller dans votre profil</h3>
+              <p>Après avoir entré vos information bancaire, aller sur votre compte 
+                et cliquer sur le bouton "Ajouter du crédit". Sélectionner le montant que vous
+                souhaitez attribuez à votre compte et valider votre montant.
+                Le montant indiqué sera automatiquement débité de votre compte.
+                Plus besoin de sortir votre carte à chaque location, vous gagnez du temps!
+                Pour savoir comment louer votre vélo => Rubrique : "Comment utiliser vélo-city"
+              </p>
+            </div>
+          </div>
+          <div class="containere right">
+            <div class="content">
+              <h3>Aller dans votre profil</h3>
+              <p>Après avoir entré vos information bancaire, aller sur votre compte 
+                et cliquer sur le bouton "Ajouter du crédit". Sélectionner le montant que vous
+                souhaitez attribuez à votre compte.
+              </p>
+            </div>
+          </div>
+          </div>
+        </div>
+        </div>
+<!------------------------------------------------------------>
+    <a href="#" id="myBtn5" class="w3-bar-item w3-button"><i class="fas fa-headset"></i>Contacter Vélo-City</a>
+    <div id="myModaleee" class="modaleee">
+      <!-- Modal content -->
+      <div class="modal-content conta">
+        <span class="closeeee">&times;</span>
+        <p>En cas de problème, vous pouvez nous appeler au 06173945**</p>
+        <p><label for="subject">Ou par message ici :</label>
+          <textarea id="subject" name="subject" placeholder="Ecrire un message.." style="height:200px"></textarea>
+      
+          <input type="submit" value="Submit"></p>
+        </div>
+        </div>
+
+  </div>
+  
+  <!-- Page Content -->
+
+  <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+  
+
+  <div>
+    <button class="w3-button w3-white w3-xlarge" onclick="w3_open()">&#9776;</button> <!------------ <img src="dist/assets/img/logovelo.png" width="150" alt="img">--> 
+    <form id="demo-2"><input type="search" placeholder="Search"></form> 
+
+  
+   <!----------- popup coeur---------------------->
+  
+<!-- The overlay -->
+<div id="myNav" class="overlay croix">
+<section class="menutest">
+  <p class="favo">Favoris</p>
+  
+</section>
+  <!-- Button to close the overlay navigation -->
+  <a href="javascript:void(0)" class="closebtn coeur" onclick="closeNav()">&times;</a>
+
+  <!-- Overlay content -->
+  <div class="overlay-content coeur"> 
+    
+    <p><i class= "fas fa-heart fa-3x"></i></p>
+    <p> Vous n'avez pas encore de favoris. Cliquez sur le coeur
+       d'une station pour l'ajouter à vos favoris
+    </p>
+  </div>
+
+</div>
+
+<!-- Use any element to open/show the overlay navigation menu -->
+<span onclick="openNav()"><i class="far fa-heart fa-1x"></i></span>
+</section>
+  <!------------fin popup coeur------------------->
+      <!-------------------chrono-------------------------------->
+ <div id="chr">
+  <div class="container chrono">
+   <form id="form-reservation" name="timerPartie">
+     <!-- <label for="partie">Fin de la réservation dans</label> -->
+     <input type="hidden" name="temps" value="10" />
+   </form>
+   
+   <p id="chrono"></p>
+ </div>
+ </div>
+    <div class="w3-container">
+      <!-----------------------------map----------------->
+       <div id="map" ></div>
+      <!-----------------------------map----------------->
+       
+    </div>
+  </div>
+       
+  <script>
+  function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+  }
+  
+  function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+  }
+  </script>
+  </div>
+
+<!---------------------------------fin nav bar------------------------------------------------------->
+<div id="logotitre">
+<img class="logo1" src="dist/assets/img/logovelo.png" width="200" alt="img">
+<div class="titre">Louer un vélo en 2 minutes chronos</div>
+</div>
+<!-------------------------blabla + Formulaire de connexion----------------------------------------------------------->
+
+<form id="formLogin">
+    <div class="form-group">
+      <label for="exampleInputEmail1"><h5>Connexion</h5></label>
+      <input type="text" class="form-control" placeholder="username" name="username">
+    </div>
+  
+    <div class="form-group">
+      <input type="password" class="form-control" placeholder="password" name="password">
+    </div>
+  
+    <div class="form-group form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Se souvenir de moi</label>
+    </div>
+    <input type="submit" class="btn-log" value="Se Connecter">
+  
+  </form>
+  <!----------------------------Formulaire 2--------------------------------------------->
+  <section class="section1">
+<form id="FormInscription">
+    <div class="form-group">
+      <label for="exampleInputEmail1"><h5>Inscription</h5></label>
+      <input type="text" class="form-control" placeholder="username" name="username">
+    </div>
+  
+    <div class="form-group">
+      <input type="password" class="form-control" placeholder="password" name="password">
+    </div>
+  <a href="#">Mot de passe oublié ?</a>
+    <input type="submit" class="btn-log inscri" value="S'inscrire">
+    
+  </form></section>
+
+ 
+
+
+
+<!--------------------------------------Map----------------------------------------->
+  
+    
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+  <script src="src/assets/js/login.js"></script>
+  <script src="src/assets/js/app.js"></script>
+  <script src="src/assets/js/script.js"></script>
+  <script src="src/assets/js/inscription.js"></script>
+</body>
+</html>
